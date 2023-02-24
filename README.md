@@ -13,7 +13,7 @@ jobs:
       run: bundle exec rspec
 
     - name: Upload coverage results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: coverage-report
         path: coverage
@@ -26,13 +26,13 @@ jobs:
 
     steps:
     - name: Download coverage report
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v3
       with:
         name: coverage-report
         path: coverage
 
     - name: Check coverage
-      uses: vigetlabs/simplecov-check@v1.0
+      uses: unil-lettres/simplecov-check@main
       with:
         minimum_coverage: 100
         coverage_path: coverage/.last_run.json
