@@ -9,6 +9,6 @@ if actual_coverage >= minimum_coverage
   STDOUT.puts("Line coverage (#{actual_coverage}%) meets the expected minimum: #{minimum_coverage}%.")
   exit(0)
 else
-  STDERR.puts("Line coverage (#{actual_coverage}%) is below the expected minimum: #{minimum_coverage}%.")
+  STDERR.puts("::error::Line coverage (#{actual_coverage}%) is below the expected minimum: #{minimum_coverage}%.")
   exit(1)
 end
