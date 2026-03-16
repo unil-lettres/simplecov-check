@@ -13,7 +13,7 @@ jobs:
       run: bundle exec rspec
 
     - name: Upload coverage results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v7
       with:
         name: coverage-report
         path: coverage
@@ -26,7 +26,7 @@ jobs:
 
     steps:
     - name: Download coverage report
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v8
       with:
         name: coverage-report
         path: coverage
