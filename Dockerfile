@@ -1,4 +1,4 @@
-FROM ruby:2.6.5-alpine
+FROM ruby:3.4.5-alpine
 
 COPY check_coverage.rb /check_coverage.rb
 
